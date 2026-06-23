@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <title>Solo e Adubação</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container navbar-container">
+        <a class="navbar-brand" href="../index.html">AgroInfo</a>
+
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-menu" id="menu">
+          <ul class="navbar-nav navbar-links">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Início</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="culturas.html">Culturas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="soloeadubacao.html">
+                Solo &amp; Adubação
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pragas.html">Pragas</a>
+            </li>
+          </ul>
+
+          <a class="btn btn-contact" href="faleconosco.html"> Fale Conosco </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <!-- Cabeçalho -->
+      <div class="text-center mb-5">
+        <h5 class="subtitulo">Fundamentos agronômicos</h5>
+
+        <h1 class="titulo">Solo e Adubação</h1>
+
+        <p class="descricao">
+          O solo é a base de tudo na agricultura. Conheça os principais tipos de
+          solo do Brasil e os nutrientes essenciais para suas culturas.
+        </p>
+      </div>
+
+      <!-- Título da seção -->
+      <h3 class="secao-titulo">🪨 Tipos de Solo no Brasil</h3>
+
+      <div class="row g-5 mt-2">
+        <!-- Coluna esquerda -->
+        <div class="col-md-6">
+          <div class="solo-card latossolo">
+            <h3>Latossolo</h3>
+
+            <p>
+              Solo profundo, bem drenado, alta permeabilidade. Comum no Cerrado.
+            </p>
+
+            <p>
+              <strong>Adequado para:</strong>
+              Soja, milho, algodão, cana-de-açúcar
+            </p>
+
+            <p>
+              <strong>Correção:</strong>
+              Adubação orgânica; cuidado com erosão.
+            </p>
+          </div>
+
+          <div class="solo-card cambissolo mt-5">
+            <h3>Cambissolo</h3>
+
+            <p>Pouco desenvolvido, raso. Frequente em áreas serranas.</p>
+
+            <p>
+              <strong>Adequado para:</strong>
+              Hortaliças, café, maçã
+            </p>
+
+            <p>
+              <strong>Correção:</strong>
+              Adubação orgânica; cuidado com erosão.
+            </p>
+          </div>
+        </div>
+
+        <!-- Coluna direita -->
+        <div class="col-md-6">
+          <div class="solo-card argissolo">
+            <h3>Argissolo</h3>
+
+            <p>Textura argilosa, variável. Comum em SP, MG e Sul do Brasil.</p>
+
+            <p>
+              <strong>Adequado para:</strong>
+              Cana, pastagens, fruticultura
+            </p>
+
+            <p>
+              <strong>Correção:</strong>
+              Controle de erosão; adubação balanceada.
+            </p>
+          </div>
+
+          <div class="solo-card gleissolo mt-5">
+            <h3>Gleissolo</h3>
+
+            <p>Saturado de água, má drenagem. Presente em várzeas.</p>
+
+            <p>
+              <strong>Adequado para:</strong>
+              Arroz irrigado, pastagens úmidas
+            </p>
+
+            <p>
+              <strong>Correção:</strong>
+              Drenagem artificial; calagem pesada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <!-- Título -->
+      <div class="titulo-area">
+        <h2>🌱 Macronutrientes Essenciais</h2>
+      </div>
+
+      <!-- Cards -->
+      <div class="row g-4 mt-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo verde">N</div>
+              <h3>Nitrogênio</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p>
+              <strong>Desenvolvimento foliar e crescimento vegetativo</strong>
+            </p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Folhas amarelas, crescimento lento</p>
+
+            <small>Fontes</small>
+            <p><strong>Ureia, sulfato de amônio, nitrato</strong></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo laranja">P</div>
+              <h3>Fósforo</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p><strong>Enraizamento, floração e frutificação</strong></p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Folhas roxo-avermelhadas, raízes fracas</p>
+
+            <small>Fontes</small>
+            <p><strong>Superfosfato simples, MAP, DAP</strong></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo roxo">K</div>
+              <h3>Potássio</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p><strong>Resistência a doenças, qualidade dos frutos</strong></p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Bordas das folhas queimadas, frutos pequenos</p>
+
+            <small>Fontes</small>
+            <p><strong>Cloreto de potássio, sulfato de potássio</strong></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo cinza">Ca</div>
+              <h3>Cálcio</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p><strong>Estrutura celular, qualidade dos frutos</strong></p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Podridão apical (tomate), folhas enroladas</p>
+
+            <small>Fontes</small>
+            <p><strong>Calcário calcítico, gesso agrícola</strong></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo azul">Mg</div>
+              <h3>Magnésio</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p><strong>Componente da clorofila, fotossíntese</strong></p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Clorose internerval (folhas velhas)</p>
+
+            <small>Fontes</small>
+            <p><strong>Calcário dolomítico, sulfato de magnésio</strong></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="nutri-card">
+            <div class="cabecalho">
+              <div class="simbolo amarelo">S</div>
+              <h3>Enxofre</h3>
+            </div>
+
+            <small>Função principal</small>
+            <p><strong>Síntese de proteínas, qualidade do grão</strong></p>
+
+            <small>Sintoma de deficiência</small>
+            <p class="alerta">Clorose nas folhas jovens</p>
+
+            <small>Fontes</small>
+            <p><strong>Superfosfato simples, gesso agrícola</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="ph-box mt-5">
+        <div class="row align-items-center">
+          <div class="col-md-1 text-center">
+            <div class="icone">☂️</div>
+          </div>
+
+          <div class="col-md-9">
+            <h4>A importância do pH do solo</h4>
+
+            <p>
+              O pH ideal para a maioria das culturas está entre
+              <strong>5.5 e 7.0</strong>. Solos ácidos (pH abaixo de 5.5)
+              bloqueiam a absorção de nutrientes mesmo que eles estejam
+              presentes no solo. A calagem é a prática mais eficiente para
+              corrigir a acidez - aplique 2 a 4 toneladas de calcário por
+              hectare, de 3 a 6 meses antes do plantio.
+            </p>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <div class="ph">
+              pH <br />
+              5.5-7.0<br />
+              Ideal
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

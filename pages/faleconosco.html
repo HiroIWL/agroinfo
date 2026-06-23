@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fale Conosco | AgroInfo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container navbar-container">
+        <a class="navbar-brand" href="../index.html">AgroInfo</a>
+
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-menu" id="menu">
+          <ul class="navbar-nav navbar-links">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Início</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="culturas.html">Culturas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="soloeadubacao.html">
+                Solo &amp; Adubação
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pragas.html">Pragas</a>
+            </li>
+          </ul>
+
+          <a class="btn btn-contact" href="faleconosco.html"> Fale Conosco </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="contact-section">
+        <div class="container">
+          <h1 class="title">Fale Conosco</h1>
+
+          <p class="subtitle">
+            Tem alguma dúvida? Preencha o formulário abaixo e fale conosco.
+          </p>
+
+          <div class="row align-items-center">
+            <div class="col-lg-5 contact-image text-center">
+              <img
+                src="../assets/imgs/fazenda.png"
+                alt="Imagem de uma fazenda"
+              />
+            </div>
+
+            <div class="col-lg-7">
+              <form class="contact-form" id="contactForm">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  placeholder="Nome completo"
+                  required
+                />
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="E-mail"
+                  required
+                />
+
+                <textarea
+                  class="form-control"
+                  id="mensagem"
+                  rows="5"
+                  maxlength="500"
+                  placeholder="Descrição da mensagem"
+                  required
+                ></textarea>
+
+                <button type="submit" class="btn btn-send">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

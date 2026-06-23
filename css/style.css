@@ -1,0 +1,847 @@
+/* ===============================
+   RESET E BASE
+   =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #ececec;
+  color: #111;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Acessibilidade: foco visível em links, botões e campos */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #f1d000;
+  outline-offset: 4px;
+}
+
+/* Reduz animações para usuários sensíveis a movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar-custom {
+  background-color: #005500;
+  padding: 0;
+  min-height: 150px;
+}
+
+.navbar-container {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #f1d000 !important;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 56px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #f1d000 !important;
+}
+
+.btn-contact {
+  background-color: #f1d000;
+  color: #005500;
+  border: none;
+  padding: 22px 44px;
+  border-radius: 48px;
+  font-size: clamp(1.25rem, 1.6vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+  background-color: #ffd900;
+  color: #005500;
+  transform: scale(1.03);
+}
+
+/* ===============================
+   HOME / INDEX
+   =============================== */
+
+.introdução {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.introdução h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #005500;
+  margin-bottom: 24px;
+}
+
+.introdução a {
+  display: inline-block;
+  background-color: #005500;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  transition: 0.3s;
+}
+
+.introdução a:hover,
+.introdução a:focus {
+  background-color: #003f00;
+  color: #f1d000;
+}
+
+.introdução p {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   CULTURAS - HERO
+   =============================== */
+
+.hero {
+  position: relative;
+  min-height: 560px;
+  width: 100%;
+  background-image: url("../assets/imgs/miho.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 24px;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 85, 0, 0.75) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+  color: #ffd900;
+}
+
+.hero-content p {
+  font-size: 1.35rem;
+  font-weight: 500;
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(64, 160, 64, 0.85);
+  color: #fff;
+  border-radius: 24px;
+  padding: 8px 18px;
+  font-weight: 700;
+}
+
+/* ===============================
+   CULTURAS - CARDS
+   =============================== */
+
+.section-culturas {
+  background-color: #dbdbdb;
+}
+
+.section-culturas h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #005500;
+}
+
+.label-top {
+  display: inline-block;
+  color: #1f9f41;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.cultura-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 20px;
+  min-height: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.cultura-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.nome {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #005500;
+}
+
+.badge-tipo {
+  background-color: rgba(81, 194, 81, 0.78);
+  color: #003f00;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.info {
+  background-color: #e2e2e2;
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+/* Botão "Ver detalhes completos" */
+.ver-mais {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: #005500;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.ver-mais:hover,
+.ver-mais:focus {
+  color: #0b8f0b;
+}
+
+/* Feature: detalhes expansíveis */
+.detalhes-cultura {
+  display: none;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.cultura-card.ativo .detalhes-cultura {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cultura-card.ativo {
+  transform: scale(1.01);
+}
+
+.detalhe-item {
+  background-color: #d9d9d9;
+  border-radius: 14px;
+  padding: 12px;
+  min-height: 95px;
+}
+
+.detalhe-item span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.detalhe-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.detalhe-item p {
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.solo-recomendado {
+  grid-column: 1 / -1;
+  background-color: #fff176;
+  border: 1px solid #d6bf00;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.solo-recomendado span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.solo-recomendado strong {
+  display: block;
+  color: #777000;
+}
+
+.solo-recomendado p {
+  margin: 4px 0 0;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ===============================
+   SOLO E ADUBAÇÃO
+   =============================== */
+
+.subtitulo {
+  color: #1f9f41;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.titulo {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #111;
+}
+
+.descricao {
+  max-width: 750px;
+  margin: auto;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.secao-titulo {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.solo-card {
+  border-radius: 22px;
+  padding: 25px;
+  border: 2px solid;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.solo-card h3 {
+  font-size: 28px;
+  color: #127c3d;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.solo-card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.solo-card strong {
+  color: #208d3f;
+}
+
+.latossolo {
+  background: #ffd9d9;
+  border-color: #ff5252;
+}
+
+.argissolo {
+  background: #ffe6d1;
+  border-color: #ff8d2d;
+}
+
+.cambissolo {
+  background: #fff9d7;
+  border-color: #e8d000;
+}
+
+.gleissolo {
+  background: #dff2ff;
+  border-color: #2da4ff;
+}
+
+.titulo-area h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #005500;
+}
+
+.nutri-card {
+  background: #d9d9d9;
+  border-radius: 22px;
+  padding: 22px;
+  min-height: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.simbolo {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.verde {
+  background: #00b53f;
+}
+
+.laranja {
+  background: #ff9200;
+}
+
+.roxo {
+  background: #cb00ff;
+}
+
+.cinza {
+  background: #8f9690;
+}
+
+.azul {
+  background: #11c7d4;
+}
+
+.amarelo {
+  background: #f4c400;
+}
+
+.cabecalho h3 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nutri-card small {
+  color: #555;
+  display: block;
+}
+
+.nutri-card p {
+  margin-bottom: 10px;
+}
+
+.alerta {
+  color: #d30000;
+  font-weight: 700;
+}
+
+.ph-box {
+  background: #006d1e;
+  border-radius: 16px;
+  padding: 22px;
+  color: white;
+}
+
+.ph-box h4 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.ph-box p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ph {
+  width: 90px;
+  height: 90px;
+  background: #ffe600;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #006d1e;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.icone {
+  font-size: 40px;
+}
+
+/* ===============================
+   FALE CONOSCO
+   =============================== */
+
+.contact-section {
+  padding: 80px 20px;
+  min-height: calc(100vh - 120px);
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+  text-align: center;
+}
+
+.contact-section .subtitle {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid #777;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #111;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #555;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: none;
+  border-color: #005500;
+}
+
+.btn-send {
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  background-color: #005500;
+  color: #fff;
+}
+
+footer {
+  background-color: #005500;
+  min-height: 120px;
+  margin-top: 50px;
+}
+
+/* ===============================
+   PRAGAS
+   =============================== */
+
+.topo h5 {
+  color: #196d2b;
+  font-weight: 700;
+}
+
+.topo h1 {
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 700;
+}
+
+.topo p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.tipo {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 5px;
+  display: inline-block;
+}
+
+.inseto {
+  background: #ffc2c2;
+  color: #a50000;
+}
+
+.fungo {
+  background: #f4b8ff;
+  color: #8200b8;
+}
+
+.bacteria {
+  background: #ffe1aa;
+  color: #a34f00;
+}
+
+.nematoide {
+  background: #ffe8a5;
+  color: #a84900;
+}
+
+.praga-card {
+  background: #d5d5d5;
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.praga-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.nivel {
+  background: #d80000;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cultura {
+  background: #b8ffb4;
+  color: #003f00;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.sintoma {
+  background: #ffd0d0;
+  border: 1px solid #c40000;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.controle {
+  background: #c4ffc4;
+  border: 1px solid #008000;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.alerta-box {
+  background: #f7e39b;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.icone-alerta {
+  font-size: 40px;
+}
+
+.alerta-box h4 {
+  color: #b75b00;
+  font-weight: 700;
+}
+
+/* ===============================
+   ELEMENTOS GERAIS
+   =============================== */
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+   =============================== */
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    min-height: auto;
+    padding: 18px 0;
+  }
+
+  .navbar-container {
+    min-height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 2.4rem;
+  }
+
+  .navbar-menu {
+    margin-top: 20px;
+  }
+
+  .navbar-links {
+    gap: 0;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
+
+  .btn-contact {
+    margin-top: 16px;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  .btn-contact {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cultura-card.ativo .detalhes-cultura {
+    grid-template-columns: 1fr;
+  }
+
+  .detalhe-item {
+    min-height: auto;
+  }
+}
