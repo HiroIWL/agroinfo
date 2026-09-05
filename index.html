@@ -3,91 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>AgroInfo</title>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- link do vídeo mostrando a navegabilidade atual do projeto:
-   
-  https://youtu.be/9GtOsbz9c-A
-
-
-  -->
-
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container navbar-container">
-        <a class="navbar-brand" href="index.html">AgroInfo</a>
-
-        <button
-          class="navbar-toggler bg-light"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Abrir menu de navegação"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse navbar-menu" id="menu">
-          <ul class="navbar-nav navbar-links">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Início</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/culturas.html">Culturas</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/soloeadubacao.html">
-                Solo &amp; Adubação
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/pragas.html">Pragas</a>
-            </li>
-          </ul>
-
-          <a class="btn btn-contact" href="./pages/faleconosco.html">
-            Fale Conosco
-          </a>
-        </div>
-      </div>
-    </nav>
-    <div class="introdução">
-      <h1>Bem-vindo à AgroInfo</h1>
-      <!-- <a href=" https://youtu.be/9GtOsbz9c-A" target="_blank">
-        Assistir vídeo no YouTube
-      </a> -->
-      <p>
-        Sua fonte de conhecimento sobre agricultura e técnicas modernas de
-        cultivo.
-      </p>
-      <p>
-        Nesse projetos tentaremos desenvolver um website informativo sobre
-        agricultura, que seja capaz de auxiliar não só o Brasil mas o mundo
-        inteiro no combate contra a fome, conforme o projeto da FIAP ODS 2: Fome
-        Zero e Agricultura Sustentável.
-      </p>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -1,7 +1,3 @@
-/* ===============================
-   RESET E BASE
-   =============================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -129,21 +125,21 @@ textarea:focus-visible {
    HOME / INDEX
    =============================== */
 
-.introdução {
+.introducao {
   text-align: center;
   padding: 80px 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.introdução h1 {
+.introducao h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   color: #005500;
   margin-bottom: 24px;
 }
 
-.introdução a {
+.introducao a {
   display: inline-block;
   background-color: #005500;
   color: #fff;
@@ -154,13 +150,13 @@ textarea:focus-visible {
   transition: 0.3s;
 }
 
-.introdução a:hover,
-.introdução a:focus {
+.introducao a:hover,
+.introducao a:focus {
   background-color: #003f00;
   color: #f1d000;
 }
 
-.introdução p {
+.introducao p {
   font-size: 1.35rem;
   font-weight: 500;
   margin-bottom: 18px;
@@ -174,7 +170,7 @@ textarea:focus-visible {
   position: relative;
   min-height: 560px;
   width: 100%;
-  background-image: url("../assets/imgs/miho.png");
+  background-image: url("../public/imgs/miho.png");
   background-size: cover;
   background-position: center;
   display: flex;
