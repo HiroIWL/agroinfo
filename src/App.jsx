@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Culturas from "./pages/Culturas";
-import SoloEAdubacao from "./pages/SoloEAdubacao";
-import Pragas from "./pages/Pragas";
-import FaleConosco from "./pages/FaleConosco";
+
+import Navbar from "./components/Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import Culturas from "./pages/Culturas.jsx";
+import SoloEAdubacao from "./pages/SoloEAdubacao.jsx";
+import Pragas from "./pages/Pragas.jsx";
+import FaleConosco from "./pages/FaleConosco.jsx";
 function App() {
   return (
     <BrowserRouter>
