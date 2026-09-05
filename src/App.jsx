@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar.jsx";
-import Home from "./pages/Home.jsx";
-import Culturas from "./pages/Culturas.jsx";
-import SoloEAdubacao from "./pages/SoloEAdubacao.jsx";
-import Pragas from "./pages/Pragas.jsx";
-import FaleConosco from "./pages/FaleConosco.jsx";
+import Navbar from "./components/navbar.jsx";
+import Home from "./pages/home.jsx";
+import Culturas from "./pages/culturas.jsx";
+import SoloEAdubacao from "./pages/soloeadubacao.jsx";
+import Pragas from "./pages/pragas.jsx";
+import FaleConosco from "./pages/faleconosco.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/culturas" element={<Culturas />} />
         <Route path="/soloeadubacao" element={<SoloEAdubacao />} />
-        <Route path="/Pragas" element={<Pragas />} />
+        <Route path="/pragas" element={<Pragas />} />
         <Route path="/faleconosco" element={<FaleConosco />} />
       </Routes>
     </BrowserRouter>
