@@ -1,73 +1,71 @@
-import { useState } from 'react'
-import culturasData from '../data/culturasData'
+import { useState } from "react";
+import culturasData from "../data/culturasData";
 
 function Culturas() {
-  const [cardAtivo, setCardAtivo] = useState(null)
+  const [cardAtivo, setCardAtivo] = useState(null);
 
-  const [clima, setClima] = useState(null)
-  const [carregandoClima, setCarregandoClima] = useState(false)
-  const [erroClima, setErroClima] = useState('')
+  const [clima, setClima] = useState(null);
+  const [carregandoClima, setCarregandoClima] = useState(false);
+  const [erroClima, setErroClima] = useState("");
 
   function toggleCard(id) {
-    setCardAtivo(cardAtivo === id ? null : id)
+    setCardAtivo(cardAtivo === id ? null : id);
   }
   function descreverClima(codigo) {
-  const codigos = {
-    0: 'Céu limpo',
-    1: 'Predominantemente limpo',
-    2: 'Parcialmente nublado',
-    3: 'Nublado',
-    45: 'Neblina',
-    51: 'Garoa fraca',
-    61: 'Chuva fraca',
-    63: 'Chuva moderada',
-    65: 'Chuva forte',
-    80: 'Pancadas de chuva',
-    95: 'Tempestade',
+    const codigos = {
+      0: "Céu limpo",
+      1: "Predominantemente limpo",
+      2: "Parcialmente nublado",
+      3: "Nublado",
+      45: "Neblina",
+      51: "Garoa fraca",
+      61: "Chuva fraca",
+      63: "Chuva moderada",
+      65: "Chuva forte",
+      80: "Pancadas de chuva",
+      95: "Tempestade",
+    };
+    return codigos[codigo] || "Condição desconhecida";
   }
-  return codigos[codigo] || 'Condição desconhecida'
-}
-
 
   function buscarClima() {
-    setCarregandoClima(true)
-    setErroClima('')
-    setClima(null)
+    setCarregandoClima(true);
+    setErroClima("");
+    setClima(null);
 
     if (!navigator.geolocation) {
-      setErroClima('Seu navegador não suporta geolocalização.')
-      setCarregandoClima(false)
-      return
+      setErroClima("Seu navegador não suporta geolocalização.");
+      setCarregandoClima(false);
+      return;
     }
 
     navigator.geolocation.getCurrentPosition(
       async (position) => {
-        const { latitude, longitude } = position.coords
+        const { latitude, longitude } = position.coords;
 
         try {
           const response = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code`
-          )
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code`,
+          );
 
           if (!response.ok) {
-            throw new Error('Falha ao buscar dados do clima.')
+            throw new Error("Falha ao buscar dados do clima.");
           }
 
-          const data = await response.json()
-          setClima(data.current)
+          const data = await response.json();
+          setClima(data.current);
         } catch (error) {
-          setErroClima('Não foi possível carregar o clima agora.')
+          setErroClima("Não foi possível carregar o clima agora.");
         } finally {
-          setCarregandoClima(false)
+          setCarregandoClima(false);
         }
       },
       () => {
-        setErroClima('Não foi possível obter sua localização.')
-        setCarregandoClima(false)
-      }
-    )
+        setErroClima("Não foi possível obter sua localização.");
+        setCarregandoClima(false);
+      },
+    );
   }
-  
 
   return (
     <main>
@@ -93,11 +91,13 @@ function Culturas() {
           <div className="text-center mb-4">
             <span className="label-top">Base de dados</span>
             <h2>Principais Culturas Agrícolas</h2>
-            <button className="btn btn-outline-success mt-3"
-            type="button"
-            onClick={buscarClima}
-            disabled={carregandoClima}>
-              {carregandoClima ? 'carregando...' : 'Ver clima atual'}
+            <button
+              className="btn btn-outline-success mt-3"
+              type="button"
+              onClick={buscarClima}
+              disabled={carregandoClima}
+            >
+              {carregandoClima ? "carregando..." : "Ver clima atual"}
             </button>
             {erroClima && <p className="text-danger mt-2">{erroClima}</p>}
             {clima && (
@@ -117,11 +117,11 @@ function Culturas() {
 
           <div className="row g-4">
             {culturasData.map((cultura) => {
-              const ativo = cardAtivo === cultura.id
+              const ativo = cardAtivo === cultura.id;
 
               return (
                 <div key={cultura.id} className="col-12 col-lg-6 col-xl-4">
-                  <div className={`cultura-card ${ativo ? 'ativo' : ''}`}>
+                  <div className={`cultura-card ${ativo ? "ativo" : ""}`}>
                     <div className="card-top">
                       <span className="icon">{cultura.icon}</span>
                       <span className="nome">{cultura.nome}</span>
@@ -135,7 +135,9 @@ function Culturas() {
                       type="button"
                       onClick={() => toggleCard(cultura.id)}
                     >
-                      {ativo ? 'Ocultar detalhes ↑' : 'Ver detalhes completos →'}
+                      {ativo
+                        ? "Ocultar detalhes ↑"
+                        : "Ver detalhes completos →"}
                     </button>
 
                     <div className="detalhes-cultura">
@@ -155,13 +157,13 @@ function Culturas() {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default Culturas
+export default Culturas;

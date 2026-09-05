@@ -1,54 +1,54 @@
-import { useState } from 'react'
-import fazendaImg from '../assets/imgs/fazenda.png'
+import { useState } from "react";
+import fazendaImg from "../assets/imgs/fazenda.png";
 
 function FaleConosco() {
-  const [nome, setNome] = useState('')
-  const [email, setEmail] = useState('')
-  const [mensagem, setMensagem] = useState('')
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const nomeTrim = nome.trim()
-    const emailTrim = email.trim()
-    const mensagemTrim = mensagem.trim()
+    const nomeTrim = nome.trim();
+    const emailTrim = email.trim();
+    const mensagemTrim = mensagem.trim();
 
-    const partesNome = nomeTrim.split(' ').filter((parte) => parte.length > 0)
-    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrim)
+    const partesNome = nomeTrim.split(" ").filter((parte) => parte.length > 0);
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrim);
 
-    if (nomeTrim === '') {
-      alert('O campo Nome completo não pode ficar em branco.')
-      return
+    if (nomeTrim === "") {
+      alert("O campo Nome completo não pode ficar em branco.");
+      return;
     }
     if (partesNome.length < 2) {
-      alert('Digite seu nome completo, com nome e sobrenome.')
-      return
+      alert("Digite seu nome completo, com nome e sobrenome.");
+      return;
     }
     if (partesNome[0].length < 2 || partesNome[1].length < 2) {
-      alert('Nome e sobrenome devem ter pelo menos duas letras cada.')
-      return
+      alert("Nome e sobrenome devem ter pelo menos duas letras cada.");
+      return;
     }
-    if (emailTrim === '') {
-      alert('O campo E-mail não pode ficar em branco.')
-      return
+    if (emailTrim === "") {
+      alert("O campo E-mail não pode ficar em branco.");
+      return;
     }
     if (!emailValido) {
-      alert('Digite um e-mail em formato válido.')
-      return
+      alert("Digite um e-mail em formato válido.");
+      return;
     }
-    if (mensagemTrim === '') {
-      alert('O campo Descrição da mensagem não pode ficar em branco.')
-      return
+    if (mensagemTrim === "") {
+      alert("O campo Descrição da mensagem não pode ficar em branco.");
+      return;
     }
     if (mensagemTrim.length > 500) {
-      alert('A mensagem deve ter no máximo 500 caracteres.')
-      return
+      alert("A mensagem deve ter no máximo 500 caracteres.");
+      return;
     }
 
-    alert('Mensagem enviada com sucesso!')
-    setNome('')
-    setEmail('')
-    setMensagem('')
+    alert("Mensagem enviada com sucesso!");
+    setNome("");
+    setEmail("");
+    setMensagem("");
   }
 
   return (
@@ -116,7 +116,7 @@ function FaleConosco() {
 
       <footer></footer>
     </>
-  )
+  );
 }
 
-export default FaleConosco
+export default FaleConosco;

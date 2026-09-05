@@ -7,9 +7,8 @@ function SoloEAdubacao() {
           <h5 className="subtitulo">Fundamentos agronômicos</h5>
           <h1 className="titulo">Solo e Adubação</h1>
           <p className="descricao">
-            O solo é a base de tudo na agricultura. Conheça os principais
-            tipos de solo do Brasil e os nutrientes essenciais para suas
-            culturas.
+            O solo é a base de tudo na agricultura. Conheça os principais tipos
+            de solo do Brasil e os nutrientes essenciais para suas culturas.
           </p>
         </div>
 
@@ -56,8 +55,7 @@ function SoloEAdubacao() {
                 Textura argilosa, variável. Comum em SP, MG e Sul do Brasil.
               </p>
               <p>
-                <strong>Adequado para:</strong> Cana, pastagens,
-                fruticultura
+                <strong>Adequado para:</strong> Cana, pastagens, fruticultura
               </p>
               <p>
                 <strong>Correção:</strong> Controle de erosão; adubação
@@ -69,12 +67,10 @@ function SoloEAdubacao() {
               <h3>Gleissolo</h3>
               <p>Saturado de água, má drenagem. Presente em várzeas.</p>
               <p>
-                <strong>Adequado para:</strong> Arroz irrigado, pastagens
-                úmidas
+                <strong>Adequado para:</strong> Arroz irrigado, pastagens úmidas
               </p>
               <p>
-                <strong>Correção:</strong> Drenagem artificial; calagem
-                pesada.
+                <strong>Correção:</strong> Drenagem artificial; calagem pesada.
               </p>
             </div>
           </div>
@@ -119,9 +115,7 @@ function SoloEAdubacao() {
                 <strong>Enraizamento, floração e frutificação</strong>
               </p>
               <small>Sintoma de deficiência</small>
-              <p className="alerta">
-                Folhas roxo-avermelhadas, raízes fracas
-              </p>
+              <p className="alerta">Folhas roxo-avermelhadas, raízes fracas</p>
               <small>Fontes</small>
               <p>
                 <strong>Superfosfato simples, MAP, DAP</strong>
@@ -182,9 +176,7 @@ function SoloEAdubacao() {
                 <strong>Componente da clorofila, fotossíntese</strong>
               </p>
               <small>Sintoma de deficiência</small>
-              <p className="alerta">
-                Clorose internerval (folhas velhas)
-              </p>
+              <p className="alerta">Clorose internerval (folhas velhas)</p>
               <small>Fontes</small>
               <p>
                 <strong>Calcário dolomítico, sulfato de magnésio</strong>
@@ -222,7 +214,7 @@ function SoloEAdubacao() {
             <div className="col-md-9">
               <h4>A importância do pH do solo</h4>
               <p>
-                O pH ideal para a maioria das culturas está entre{' '}
+                O pH ideal para a maioria das culturas está entre{" "}
                 <strong>5.5 e 7.0</strong>. Solos ácidos (pH abaixo de 5.5)
                 bloqueiam a absorção de nutrientes mesmo que eles estejam
                 presentes no solo. A calagem é a prática mais eficiente para
@@ -243,7 +235,7 @@ function SoloEAdubacao() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default SoloEAdubacao
+export default SoloEAdubacao;

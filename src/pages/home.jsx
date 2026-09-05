@@ -9,11 +9,11 @@ function Home() {
       <p>
         Nesse projetos tentaremos desenvolver um website informativo sobre
         agricultura, que seja capaz de auxiliar não só o Brasil mas o mundo
-        inteiro no combate contra a fome, conforme o projeto da FIAP ODS 2:
-        Fome Zero e Agricultura Sustentável.
+        inteiro no combate contra a fome, conforme o projeto da FIAP ODS 2: Fome
+        Zero e Agricultura Sustentável.
       </p>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
