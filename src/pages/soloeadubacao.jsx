@@ -2,7 +2,6 @@ function SoloEAdubacao() {
   return (
     <>
       <div className="container py-4">
-        {/* Cabeçalho */}
         <div className="text-center mb-5">
           <h5 className="subtitulo">Fundamentos agronômicos</h5>
           <h1 className="titulo">Solo e Adubação</h1>
@@ -12,11 +11,9 @@ function SoloEAdubacao() {
           </p>
         </div>
 
-        {/* Título da seção */}
         <h3 className="secao-titulo">🪨 Tipos de Solo no Brasil</h3>
 
         <div className="row g-5 mt-2">
-          {/* Coluna esquerda */}
           <div className="col-md-6">
             <div className="solo-card latossolo">
               <h3>Latossolo</h3>
@@ -47,7 +44,6 @@ function SoloEAdubacao() {
             </div>
           </div>
 
-          {/* Coluna direita */}
           <div className="col-md-6">
             <div className="solo-card argissolo">
               <h3>Argissolo</h3>
@@ -78,12 +74,10 @@ function SoloEAdubacao() {
       </div>
 
       <div className="container py-4">
-        {/* Título */}
         <div className="titulo-area">
           <h2>🌱 Macronutrientes Essenciais</h2>
         </div>
 
-        {/* Cards */}
         <div className="row g-4 mt-4">
           <div className="col-lg-4 col-md-6">
             <div className="nutri-card">
@@ -204,7 +198,6 @@ function SoloEAdubacao() {
           </div>
         </div>
 
-        {/* Barra inferior */}
         <div className="ph-box mt-5">
           <div className="row align-items-center">
             <div className="col-md-1 text-center">

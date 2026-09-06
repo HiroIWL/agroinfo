@@ -2,7 +2,6 @@ function Pragas() {
   return (
     <>
       <div className="container py-4">
-        {/* Cabeçalho */}
         <div className="text-center topo">
           <h5>Fitossanidade</h5>
 
@@ -14,7 +13,6 @@ function Pragas() {
           </p>
         </div>
 
-        {/* categorias */}
         <div className="text-center my-5">
           <span className="tipo inseto">🪲 Inseto</span>
 
@@ -25,9 +23,7 @@ function Pragas() {
           <span className="tipo nematoide">🪱 Nematoide</span>
         </div>
 
-        {/* Cards */}
         <div className="row g-4">
-          {/* Cards 1 */}
           <div className="col-lg-6">
             <div className="praga-card">
               <h3>🐛 Lagarta-do-cartucho</h3>
@@ -58,8 +54,6 @@ function Pragas() {
             </div>
           </div>
 
-          {/* Cards 2 */}
-
           <div className="col-lg-6">
             <div className="praga-card">
               <h3>🍄 Ferrugem asiática da soja</h3>
@@ -87,8 +81,6 @@ function Pragas() {
               </div>
             </div>
           </div>
-
-          {/* Cards 3  */}
 
           <div className="col-lg-6">
             <div className="praga-card">
@@ -121,8 +113,6 @@ function Pragas() {
               </div>
             </div>
           </div>
-
-          {/* Cards 4 */}
 
           <div className="col-lg-6">
             <div className="praga-card">
@@ -157,8 +147,6 @@ function Pragas() {
             </div>
           </div>
         </div>
-
-        {/* Alerta */}
 
         <div className="alerta-box mt-5">
           <div className="row align-items-center">
