@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import culturasData from "../data/culturasData";
 
 function Culturas() {
@@ -8,9 +8,25 @@ function Culturas() {
   const [carregandoClima, setCarregandoClima] = useState(false);
   const [erroClima, setErroClima] = useState("");
 
-  function toggleCard(id) {
-    setCardAtivo(cardAtivo === id ? null : id);
-  }
+  // Cultura que está aberta no modal (ou undefined se nenhuma)
+  const culturaSelecionada = culturasData.find((c) => c.id === cardAtivo);
+  // Fecha o modal ao apertar ESC
+  useEffect(() => {
+    function handleEsc(event) {
+      if (event.key === "Escape") setCardAtivo(null);
+    }
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  // Trava a rolagem da página enquanto o modal está aberto
+  useEffect(() => {
+    document.body.style.overflow = cardAtivo ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [cardAtivo]);
+
   function descreverClima(codigo) {
     const codigos = {
       0: "Céu limpo",
@@ -70,6 +86,14 @@ function Culturas() {
   return (
     <main>
       <section className="hero">
+       <video
+       className="hero-video"
+       src="/videos/fazenda.mp4"
+       autoPlay
+       muted
+       loop
+       playsInline
+       />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>
@@ -91,24 +115,28 @@ function Culturas() {
           <div className="text-center mb-4">
             <span className="label-top">Base de dados</span>
             <h2>Principais Culturas Agrícolas</h2>
+
             <button
               className="btn btn-outline-success mt-3"
               type="button"
               onClick={buscarClima}
               disabled={carregandoClima}
             >
-              {carregandoClima ? "carregando..." : "Ver clima atual"}
+              {carregandoClima ? "Carregando..." : "🌤️ Ver clima atual"}
             </button>
+
             {erroClima && <p className="text-danger mt-2">{erroClima}</p>}
+
             {clima && (
               <div className="mt-3">
                 <p>
-                  🌡<strong>{clima.temperature_2m}°C</strong>
+                  🌡️ <strong>{clima.temperature_2m}°C</strong> —{" "}
                   {descreverClima(clima.weather_code)}
                 </p>
-                <p>🌢 Umidade: {clima.relative_humidity_2m}%</p>
+                <p>💧 Umidade: {clima.relative_humidity_2m}%</p>
               </div>
             )}
+
             <p className="subtitle">
               Clique em "Ver detalhes completos" para visualizar informações
               técnicas sobre plantio, clima, solo e necessidade hídrica.
@@ -116,52 +144,76 @@ function Culturas() {
           </div>
 
           <div className="row g-4">
-            {culturasData.map((cultura) => {
-              const ativo = cardAtivo === cultura.id;
-
-              return (
-                <div key={cultura.id} className="col-12 col-lg-6 col-xl-4">
-                  <div className={`cultura-card ${ativo ? "ativo" : ""}`}>
-                    <div className="card-top">
-                      <span className="icon">{cultura.icon}</span>
-                      <span className="nome">{cultura.nome}</span>
-                      <span className="badge-tipo">{cultura.tipo}</span>
-                    </div>
-
-                    <p className="info">{cultura.infoResumo}</p>
-
-                    <button
-                      className="ver-mais"
-                      type="button"
-                      onClick={() => toggleCard(cultura.id)}
-                    >
-                      {ativo
-                        ? "Ocultar detalhes ↑"
-                        : "Ver detalhes completos →"}
-                    </button>
-
-                    <div className="detalhes-cultura">
-                      {cultura.detalhes.map((d, index) => (
-                        <div className="detalhe-item" key={index}>
-                          <span>{d.icon}</span>
-                          <strong>{d.titulo}</strong>
-                          <p>{d.texto}</p>
-                        </div>
-                      ))}
-
-                      <div className="solo-recomendado">
-                        <span>🪨</span>
-                        <strong>Solo recomendado</strong>
-                        <p>{cultura.soloRecomendado}</p>
-                      </div>
-                    </div>
+            {culturasData.map((cultura) => (
+              <div key={cultura.id} className="col-12 col-lg-6 col-xl-4">
+                <div className="cultura-card">
+                  <div className="card-top">
+                    <span className="icon">{cultura.icon}</span>
+                    <span className="nome">{cultura.nome}</span>
+                    <span className="badge-tipo">{cultura.tipo}</span>
                   </div>
+
+                  <p className="info">{cultura.infoResumo}</p>
+
+                  <button
+                    className="ver-mais"
+                    type="button"
+                    onClick={() => setCardAtivo(cultura.id)}
+                  >
+                    Ver detalhes completos <span className="seta">→</span>
+                  </button>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Modal de detalhes */}
+      {culturaSelecionada && (
+        <div className="modal-overlay" onClick={() => setCardAtivo(null)}>
+          <div
+            className="modal-cultura"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-titulo"
+          >
+            <button
+              className="modal-fechar"
+              type="button"
+              onClick={() => setCardAtivo(null)}
+              aria-label="Fechar"
+            >
+              ✕
+            </button>
+
+            <div className="card-top">
+              <span className="icon">{culturaSelecionada.icon}</span>
+              <span className="nome" id="modal-titulo">
+                {culturaSelecionada.nome}
+              </span>
+              <span className="badge-tipo">{culturaSelecionada.tipo}</span>
+            </div>
+
+            <div className="modal-detalhes-grid">
+              {culturaSelecionada.detalhes.map((d, index) => (
+                <div className="detalhe-item" key={index}>
+                  <span>{d.icon}</span>
+                  <strong>{d.titulo}</strong>
+                  <p>{d.texto}</p>
+                </div>
+              ))}
+
+              <div className="solo-recomendado">
+                <span>🪨</span>
+                <strong>Solo recomendado</strong>
+                <p>{culturaSelecionada.soloRecomendado}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
