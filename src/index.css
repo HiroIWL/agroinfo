@@ -938,3 +938,215 @@ iframe {
     min-height: auto;
   }
 }
+
+/* ===============================
+   CARD DE CLIMA
+   =============================== */
+
+.clima-card {
+  max-width: 780px;
+  margin: 28px auto 24px;
+  background: linear-gradient(135deg, #ffffff, #ecf8ec);
+  border: 2px solid #b7dfb7;
+  border-radius: 22px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 85, 0, 0.12);
+}
+
+.clima-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.clima-icon {
+  width: 58px;
+  height: 58px;
+  background-color: #f1d000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.clima-label {
+  display: inline-block;
+  color: #008a2e;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.clima-card h3 {
+  color: #005500;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.clima-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.clima-info-box {
+  background-color: #ffffff;
+  border: 1px solid #d6ead6;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+}
+
+.clima-info-box span {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.clima-info-box p {
+  color: #4b4b4b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.clima-info-box strong {
+  color: #005500;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .clima-card {
+    padding: 20px;
+    margin: 24px 16px;
+  }
+
+  .clima-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clima-card-header {
+    align-items: flex-start;
+  }
+
+  .clima-card h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* ===============================
+   FEATURE FASE 6: RECOMENDAÇÃO AGRÍCOLA
+   =============================== */
+
+.recomendacao-card {
+  max-width: 780px;
+  margin: 16px auto 36px;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 85, 0, 0.12);
+}
+
+.recomendacao-label {
+  display: inline-block;
+  background-color: #005500;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.recomendacao-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.recomendacao-card p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.recomendacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.recomendacao-grid h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #005500;
+}
+
+.recomendacao-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recomendacao-tags span {
+  background-color: #ffffff;
+  color: #005500;
+  border: 1px solid #005500;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+}
+
+.recomendacao-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.recomendacao-card li {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.recomendacao-card.favoravel {
+  background-color: #dff5df;
+  border: 2px solid #33a852;
+}
+
+.recomendacao-card.atencao {
+  background-color: #fff3cd;
+  border: 2px solid #e0a800;
+}
+
+.recomendacao-card.alerta {
+  background-color: #ffd9d9;
+  border: 2px solid #d80000;
+}
+
+.recomendacao-card.moderado {
+  background-color: #e8f0ff;
+  border: 2px solid #4f83cc;
+}
+
+@media (max-width: 768px) {
+  .recomendacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recomendacao-card {
+    padding: 18px;
+    margin: 16px 16px 32px;
+  }
+
+  .recomendacao-card h3 {
+    font-size: 1.5rem;
+  }
+}

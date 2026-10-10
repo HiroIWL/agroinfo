@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import culturasData from "../data/culturasData";
+import RecomendacaoAgricola from "../components/recomendacaoagricola.jsx";
 
 function Culturas() {
   const [cardAtivo, setCardAtivo] = useState(null);
@@ -86,14 +87,14 @@ function Culturas() {
   return (
     <main>
       <section className="hero">
-       <video
-       className="hero-video"
-       src="/videos/fazenda.mp4"
-       autoPlay
-       muted
-       loop
-       playsInline
-       />
+        <video
+          className="hero-video"
+          src="/videos/fazenda.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>
@@ -128,13 +129,40 @@ function Culturas() {
             {erroClima && <p className="text-danger mt-2">{erroClima}</p>}
 
             {clima && (
-              <div className="mt-3">
-                <p>
-                  🌡️ <strong>{clima.temperature_2m}°C</strong> —{" "}
-                  {descreverClima(clima.weather_code)}
-                </p>
-                <p>💧 Umidade: {clima.relative_humidity_2m}%</p>
-              </div>
+              <>
+                <section className="clima-card">
+                  <div className="clima-card-header">
+                    <span className="clima-icon">🌤️</span>
+
+                    <div>
+                      <span className="clima-label">Clima atual</span>
+                      <h3>Condições da sua região</h3>
+                    </div>
+                  </div>
+
+                  <div className="clima-card-grid">
+                    <div className="clima-info-box">
+                      <span>🌡️</span>
+                      <p>Temperatura</p>
+                      <strong>{clima.temperature_2m}°C</strong>
+                    </div>
+
+                    <div className="clima-info-box">
+                      <span>☁️</span>
+                      <p>Condição</p>
+                      <strong>{descreverClima(clima.weather_code)}</strong>
+                    </div>
+
+                    <div className="clima-info-box">
+                      <span>💧</span>
+                      <p>Umidade</p>
+                      <strong>{clima.relative_humidity_2m}%</strong>
+                    </div>
+                  </div>
+                </section>
+
+                <RecomendacaoAgricola clima={clima} />
+              </>
             )}
 
             <p className="subtitle">
