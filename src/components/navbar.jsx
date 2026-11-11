@@ -45,8 +45,13 @@ function Navbar() {
                 Pragas
               </Link>
             </li>
+          
+          <li className="nav-item">
+            <Link className="nav-link" to="/duvidas">
+             Dúvidas
+            </Link>
+          </li>
           </ul>
-
           <Link className="btn btn-contact" to="/faleconosco">
             Fale Conosco
           </Link>

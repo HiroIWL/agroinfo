@@ -6,6 +6,8 @@ import Culturas from "./pages/culturas.jsx";
 import SoloEAdubacao from "./pages/soloeadubacao.jsx";
 import Pragas from "./pages/pragas.jsx";
 import FaleConosco from "./pages/faleconosco.jsx";
+import Duvidas from "./pages/Duvidas";
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,7 @@ function App() {
         <Route path="/soloeadubacao" element={<SoloEAdubacao />} />
         <Route path="/pragas" element={<Pragas />} />
         <Route path="/faleconosco" element={<FaleConosco />} />
+        <Route path="/duvidas" element={<Duvidas />} />
       </Routes>
     </BrowserRouter>
   );
