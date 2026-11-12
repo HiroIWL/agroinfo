@@ -6,7 +6,7 @@ import Culturas from "./pages/culturas.jsx";
 import SoloEAdubacao from "./pages/soloeadubacao.jsx";
 import Pragas from "./pages/pragas.jsx";
 import FaleConosco from "./pages/faleconosco.jsx";
-import Duvidas from "./pages/Duvidas";
+import Duvidas from "./pages/duvidas";
 
 function App() {
   return (
