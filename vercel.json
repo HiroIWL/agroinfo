@@ -19,7 +19,35 @@
       }
     },
     {
-      "source": "/:pagina(culturas|soloeadubacao|pragas|faleconosco|duvidas)",
+      "source": "/culturas",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/soloeadubacao",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/pragas",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/faleconosco",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/duvidas",
       "destination": {
         "service": "web",
         "path": "/index.html"
