@@ -3,13 +3,7 @@
   "services": {
     "web": {
       "root": ".",
-      "framework": "vite",
-      "rewrites": [
-        {
-          "source": "/(.*)",
-          "destination": "/index.html"
-        }
-      ]
+      "framework": "vite"
     },
     "api": {
       "root": "backend/",
@@ -22,6 +16,13 @@
       "source": "/api/(.*)",
       "destination": {
         "service": "api"
+      }
+    },
+    {
+      "source": "/(culturas|soloeadubacao|pragas|faleconosco|duvidas)/?",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
       }
     },
     {
